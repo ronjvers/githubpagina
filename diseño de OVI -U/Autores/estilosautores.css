@@ -1,0 +1,106 @@
+h1{
+    font-size:30px;
+    font-family: open sans, sans serif;
+    font-weight: bold;
+}
+h2{
+font: bold, 16px open sans, sans serif;
+}
+section{
+display:block;
+}
+.cuerpol{
+text-align: justify;
+margin: 20px;
+width: 60%;
+float: left;    
+}
+article{
+    font: bold 14px open sans, sans serif;
+    background:#1b4668;
+    color: white;
+    padding: 4px 4px;
+    margin-bottom: 30px;
+    margin-top:-20px;
+}
+img{
+border: 2px solid #808080;
+border-radius: 8px;
+}
+#imag1{
+display: block;
+margin:auto;
+width:100%;
+}
+#imag2{
+display: block;    
+margin:auto;
+width:90%;
+}
+#imag3{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag4{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag5{
+display: block;
+margin:auto;
+ width:80%;
+}
+#imag6{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag7{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag8{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag9{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag10{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag11{
+display: block;
+margin:auto;
+width:80%;
+}
+#imag12{
+display: block;
+margin:auto;
+width:80%;
+}
+.pie{
+    clear: both;
+    text-align:center;
+    padding:10px;
+    margin-top: 40px;
+    background: black;
+    font: bold 12px open sans, sans serif;
+    color: white;
+    }
+    .barra {
+      background:#1b4668;
+      color: white;
+      margin-left: 64%;
+      margin-bottom: 30%;
+      padding:3px 3px;
+      margin-top:8px;
+    }

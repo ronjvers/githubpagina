@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+    <meta charset = "utf-8" />
+    <title>Cursos de Diseños Web</title>
+    <meta name="desciptiion" content="Cursos de Diseños Web" />
+    <meta name="author" content="Ronny Jesus Vergara Sanes" />
+    <meta name="kywords" content= "Cursos de diseño web, html, git, github, css" />
+    <link rel="stylesheet" href="estiloslectura/estiloslectura5.css"> 
+    </head>
+    <body>       
+        <section class="cuerpol">
+            <article>
+                <hgroup>
+                    <h1>CSS</h1>
+                    <h2>Que es CSS</h2>
+                </hgroup>
+                <p><blockquote cite="Gauchat, J. (2012). EL GRAN LIBRO DE HTML5, CSS3 Y jAVASCRIPT. ESPAÑA: MARCOMBO. Recuperado el 18 de 10 de 2018"> 
+                        Conceptos básicos: CSS es un lenguaje que trabaja junto con HTML para proveer
+                        estilos visuales a los elementos del documento, como tamaño, color, fondo,
+                        bordes, etc…                                     
+                </blockquote>
+                </p>                            
+            </article>
+            <article>
+                    <hgroup>
+                        <h2>Estilos y Estructuras</h2>
+                    </hgroup>
+                    <p><blockquote cite="Gauchat, J. (2012). EL GRAN LIBRO DE HTML5, CSS3 Y jAVASCRIPT. ESPAÑA: MARCOMBO. Recuperado el 18 de 10 de 2018"> 
+                            A pesar de que cada navegador garantiza estilos por defecto para cada uno de los
+                            elementos HTML, estos estilos no necesariamente satisfacen los requerimientos de cada
+                            diseñador. Normalmente se encuentran muy distanciados de lo que queremos para
+                            nuestros sitios webs. Diseñadores y desarrolladores a menudo deben aplicar sus propios
+                            estilos para obtener la organización y el efecto visual que realmente desean.
+                        <p>IMPORTANTE: En esta parte del capítulo vamos a revisar estilos CSS y explicar
+                            algunas técnicas básicas para definir la estructura de un documento. Si usted ya
+                             se encuentra familiarizado con estos conceptos, siéntase libre de obviar las
+                             partes que ya conoce.
+                        </p> 
+                    <h2>Elementos en Bloque</h2>
+                    <p>Con respecto a la estructura, básicamente cada navegador ordena los elementos por
+                        defecto de acuerdo a su tipo: block (bloque) o inline (en línea). Esta clasificación está
+                        asociada con la forma en que los elementos son mostrados en pantalla.
+                        </p> 
+                        <ul>
+                        <li>Elementos block son posicionados uno sobre otro hacia abajo en la página.</li>
+                        <li>Elementos inline son posicionados lado a lado, uno al lado del otro en la misma
+                            línea, sin ningún salto de línea a menos que ya no haya más espacio horizontal
+                            para ubicarlos.
+                        </li>
+                        </ul>
+                    <P>Casi todos los elementos estructurales en nuestros documentos serán tratados por los
+                        navegadores como elementos block por defecto. Esto significa que cada elemento HTML
+                        que representa una parte de la organización visual (por ejemplo, (section), (nav),
+                        (header), (footer), (div>) será posicionado debajo del anterior.
+                        En el Capítulo 1 creamos un documento HTML con la intención de reproducir un sitio web
+                        tradicional. El diseño incluyó barras horizontales y dos columnas en el medio. Debido a la
+                        forma en que los navegadores muestran estos elementos por defecto, el resultado en la                        
+                    </P> 
+                    <P>pantalla está muy lejos de nuestras expectativas. Tan pronto como el archivo HTML con el
+                            código del Listado 1-18, Capítulo 1, es abierto en el navegador, la posición errónea en la
+                            pantalla de las dos columnas definidas por los elementos (section) y (aside) es
+                            claramente visible. Una columna está debajo de la otra en lugar de estar a su lado, como
+                            correspondería. Cada bloque (block) es mostrado por defecto tan ancho como sea posible, tan
+                            alto como la información que contiene y uno sobre otro, como se muestra en la Figura
+                    </P>    
+                    <img src="imagenes lectura git/CSS/estilo normal.jpg" alt="" id="imag1"/>                                          
+                    </blockquote>
+                    </p>                    
+                </article>
+                <article>
+                        <hgroup>
+                            <h2>Modelos de Caja</h2>
+                        </hgroup>
+                        <p><blockquote cite="Gauchat, J. (2012). EL GRAN LIBRO DE HTML5, CSS3 Y jAVASCRIPT. ESPAÑA: MARCOMBO. Recuperado el 18 de 10 de 2018">
+                                Para aprender cómo podemos crear nuestra propia organización de los elementos en
+                                pantalla, debemos primero entender cómo los navegadores procesan el código HTML. Los
+                                navegadores consideran cada elemento HTML como una caja. Una página web es en
+                                realidad un grupo de cajas ordenadas siguiendo ciertas reglas. Estas reglas son
+                                establecidas por estilos provistos por los navegadores o por los diseñadores usando CSS.
+                                CSS tiene un set predeterminado de propiedades destinados a sobrescribir los estilos
+                                provistos por navegadores y obtener la organización deseada. Estas propiedades no son
+                                específicas, tienen que ser combinadas para formar reglas que luego serán usadas para
+                                agrupar cajas y obtener la correcta disposición en pantalla. La combinación de estas reglas                 
+                        <p>es normalmente llamada modelo o sistema de disposición. Todas estas reglas aplicadas
+                            juntas constituyen lo que se llama un modelo de caja.
+                            Existe solo un modelo de caja que es considerado estándar estos días, y muchos otros
+                            que aún se encuentran en estado experimental. El modelo válido y ampliamente adoptado
+                            es el llamado Modelo de Caja Tradicional, el cual ha sido usado desde la primera versión
+                            de CSS.
+                            Aunque este modelo ha probado ser efectivo, algunos modelos experimentales
+                            intentan superar sus deficiencias, pero la falta de consenso sobre el reemplazo más
+                            adecuado aún mantiene a este viejo modelo en vigencia y la mayoría de los sitios webs
+                            programados en HTML5 lo continúan utilizando.</p>
+                        <h2>Conceptos básicos sobre estilos</h2>
+                        <p>Antes de comenzar a insertar reglas CSS en nuestro archivo de estilos y aplicar un modelo
+                            de caja, debemos revisar los conceptos básicos sobre estilos CSS que van a ser utilizados
+                            en el resto del libro.
+                            Aplicar estilos a los elementos HTML cambia la forma en que estos son presentados en
+                            pantalla. Como explicamos anteriormente, los navegadores proveen estilos por defecto
+                            que en la mayoría de los casos no son suficientes para satisfacer las necesidades de los
+                            diseñadores. Para cambiar esto, podemos sobrescribir estos estilos con los nuestros
+                            usando diferentes técnicas.</p>
+                            <p>Conceptos básicos: En este libro encontrará solo una introducción breve a los
+                            estilos CSS. Solo mencionamos las técnicas y propiedades que necesita conocer
+                            para entender los temas y códigos estudiados en próximos capítulos. Si considera
+                            que no tiene la suficiente experiencia en CSS y necesita mayor información visite
+                            nuestro sitio web y siga los enlaces correspondientes a este capítulo.
+                            </p>
+                        <h2>Estilos en Linea</h2>
+                         <p>Una de las técnicas más simples para incorporar estilos CSS a un documento HTML es la de
+                            asignar los estilos dentro de las etiquetas por medio del atributo style.
+                            El Listado 2-1 muestra un documento HTML simple que contiene el elemento (p)
+                            modificado por el atributo style con el valor font-size: 20px. Este estilo cambia el
+                            tamaño por defecto del texto dentro del elemento (p) a un nuevo tamaño de 20 pixeles.    
+                        </p>   
+                       <img src="imagenes lectura git/CSS/estilos dentro de etiqueta.jpg" alt="" id="imag2"/>
+                       <p>Usar la técnica demostrada anteriormente es una buena manera de probar estilos y
+                        obtener una vista rápida de sus efectos, pero no es recomendado para aplicar estilos a
+                        todo el documento. La razón es simple: cuando usamos esta técnica, debemos escribir y
+                        repetir cada estilo en cada uno de los elementos que queremos modificar, incrementando
+                        el tamaño del documento a proporciones inaceptables y haciéndolo imposible de
+                        mantener y actualizar. Solo imagine lo que ocurriría si decide que en lugar de 20 pixeles el
+                        tamaño de cada uno de los elementos (p) debería ser de 24 pixeles. Tendría que
+                        modificar cada estilo en cada etiqueta (p) en el documento completo.</p>                                                                                                   
+                        </blockquote>
+                        </p>
+                        <h2>Estilos Embebidos</h2>
+                        <p>Una mejor alternativa es insertar los estilos en la cabecera del documento y luego usar
+                        referencias para afectar los elementos HTML correspondientes:
+                        </p> 
+                        <img src="imagenes lectura git/CSS/Estilos Embebidos.jpg" alt="" id="imag3"/> 
+                        <h2>Comandos CSS</h2>
+                        <img src="imagenes lectura git/CSS/comandos.jpg" alt="" id="imag4"/> 
+                        <img src="imagenes lectura git/CSS/comandos2.jpg" alt="" id="imag5"/>                   
+                    </article>            
+        </section>
+        <aside class="barra">
+                <h1>Diseño Web</h1>
+                <p><q>El diseño web es una de las disciplinas del diseño, entre las que se encuentra también el diseño gráfico, que constituye una de las funciones creativas más elementales del marketing por Internet y que tiene por objetivo la producción de sitios web. 
+                   </q>  
+                </p>                                   
+        </aside>
+        <footer class="pie">
+            Derechos reservados 2018 - 2020
+        </footer>
+    </body

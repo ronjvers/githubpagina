@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+    <meta charset = "utf-8" />
+    <title>Cursos de Diseños Web</title>
+    <meta name="desciptiion" content="Cursos de Diseños Web" />
+    <meta name="author" content="Ronny Jesus Vergara Sanes" />
+    <meta name="kywords" content= "Cursos de diseño web, html, git, github, css" />
+    <link rel="stylesheet" href="estiloslectura/estiloslectura6.css"> 
+    </head>
+    <body>       
+        <section class="cuerpol">
+            <article>
+                <hgroup>
+                    <h1>CSS avanzado</h1>
+                    <h2>Modelo de Caja Tradicional</h2>
+                </hgroup>
+                <p><blockquote cite="Gauchat, J. (2012). EL GRAN LIBRO DE HTML5, CSS3 Y jAVASCRIPT. ESPAÑA: MARCOMBO. Recuperado el 18 de 10 de 2018"> 
+                 <p>Todo comenzó con tablas. Las tablas fueron los elementos que sin intención se volvieron la
+                    herramienta ideal utilizada por desarrolladores para crear y organizar cajas de contenido en
+                    la pantalla. Este puede ser considerado el primer modelo de caja de la web. Las cajas eran
+                    creadas expandiendo celdas y combinando filas de celdas, columnas de celdas y tablas
+                    enteras, unas sobre otras o incluso anidadas. Cuando los sitios webs crecieron y se volvieron
+                    más y más complejos esta práctica comenzó a presentar serios problemas relacionados con
+                    el tamaño y el mantenimiento del código necesario para crearlos.
+                    Estos problemas iniciales hicieron necesario lo que ahora vemos como una práctica
+                    natural: la división entre estructura y presentación. Usando etiquetas (div) y estilos CSS
+                    fue posible reemplazar la función de tablas y efectivamente separar la estructura HTML de
+                    la presentación. Con elementos (div) y CSS podemos crear cajas en la pantalla,
+                    posicionar estas cajas a un lado o a otro y darles un tamaño, color o borde específico entre
+                    otras características. CSS provee propiedades específicas que nos permiten organizar las
+                    cajas acorde a nuestros deseos. Estas propiedades son lo suficientemente poderosas
+                    como para crear un modelo de caja que se transformó en lo que hoy conocemos como
+                    Modelo de Caja Tradicional.
+                    Algunas deficiencias en este modelo mantuvieron a las tablas vivas por algún tiempo,
+                    pero los principales desarrolladores, influenciados por el suceso de las implementaciones
+                    Ajax y una cantidad enorme de nuevas aplicaciones interactivas, gradualmente volvieron a
+                    las etiquetas (div) y estilos CSS en un estándar. Finalmente el Modelo de Caja
+                    Tradicional fue adoptado a gran escala. 
+                </p>
+                <h2>Plantilla</h2> 
+                <p>En el Capítulo 1 construimos una plantilla HTML5. Esta plantilla tiene todos los elementos
+                    necesarios para proveer estructura a nuestro documento, pero algunos detalles deben ser
+                    agregados para aplicar los estilos CSS y el Modelo de Caja Tradicional.
+                    Este modelo necesita agrupar cajas juntas para ordenarlas horizontalmente. Debido a
+                    que el contenido completo del cuerpo es creado a partir de cajas, debemos agregar un
+                    elemento <div> para agruparlas, centrarlas y darles un tamaño específico.
+                    La nueva plantilla lucirá de este modo:</p>                  
+                <img src="imagenes lectura git/css avanzado/Plantilla.jpg" alt="" id="imag1"/>                                                     
+                </blockquote>
+                <p> <img src="imagenes lectura git/css avanzado/Plantilla1.jpg" alt="" id="imag2"/></p>
+                <p> <img src="imagenes lectura git/css avanzado/Plantilla2.jpg" alt="" id="imag3"/></p>
+                </p>                     
+            </article>
+            <article>
+                    <hgroup>
+                        <h2></h2>
+                    </hgroup>
+                    <p><blockquote cite="">
+                            El Listado 2-25 provee una nueva plantilla lista para recibir los estilos CSS. Dos cambios
+                            importantes pueden distinguirse al comparar este código con el del Listado 1-18 del
+                            Capítulo 1. El primero es que ahora varias etiquetas fueron identificadas con los atributos
+                            id y class. Esto significa que podemos referenciar un elemento específico desde las
+                            reglas CSS con el valor de su atributo id o podemos modificar varios elementos al mismo
+                            tiempo usando el valor de su atributo class.
+                            El segundo cambio realizado a la vieja plantilla es la adición del elemento (div)
+                            mencionado anteriormente. Este (div) fue identificado con el atributo y el valor
+                            id=”agrupar”, y es cerrado al final del cuerpo con la etiqueta de cierre (div). Este
+                            elemento se encarga de agrupar todos los demás elementos permitiéndonos aplicar el
+                            modelo de caja al cuerpo y designar su posición horizontal, como veremos más adelante.
+                            Hágalo usted mismo: Compare el código del Listado 1-18 del Capítulo 1 con el
+                            código en el Listado 2-25 de este capítulo y ubique las etiquetas de apertura y
+                            cierre del elemento (div) utilizado para agrupar al resto. También compruebe
+                            cuáles elementos se encuentran ahora identificados con el atributo id y cuáles con
+                            el atributo class. Confirme que los valores de los atributos id son únicos para
+                            cada etiqueta. También necesitará reemplazar el código en el archivo HTML creado
+                            anteriormente por el del Listado 2-25 para aplicar los siguientes estilos CSS.
+                            Con el documento HTML finalizado es tiempo de trabajar en nuestro archivo de estilos.
+                            Selector universal *
+                            Comencemos con algunas reglas básicas que nos ayudarán a proveer consistencia al
+                            diseño: 
+                            <p><img src="imagenes lectura git/css avanzado/reglacss.jpg" alt="" id="imag4"/></p>
+                            <p>Normalmente, para la mayoría de los elementos, necesitamos personalizar los
+                                márgenes o simplemente mantenerlos al mínimo. Algunos elementos por defecto tienen
+                                márgenes que son diferentes de cero y en la mayoría de los casos demasiado amplios. A
+                                medida que avanzamos en la creación de nuestro diseño encontraremos que la mayoría
+                            </p> 
+                            <p>de los elementos utilizados deben tener un margen de 0 pixeles. Para evitar el tener que
+                                repetir estilos constantemente, podemos utilizar el selector universal.
+                                La primera regla en nuestro archivo CSS, presentada en el Listado 2-26, nos asegura
+                                que todo elemento tendrá un margen interno y externo de 0 pixeles. De ahora en más
+                                solo necesitaremos modificar los márgenes de los elementos que queremos que sean
+                                mayores que cero
+                            </p>
+                            <p>Conceptos básicos: Recuerde que en HTML cada elemento es considerado como
+                                una caja. El margen (margin) es en realidad el espacio alrededor del elemento, el
+                                que se encuentra por fuera del borde de esa caja (el estilo padding, por otro
+                                lado, es el espacio alrededor del contenido del elemento pero dentro de sus
+                                bordes, como el espacio entre el título y el borde de la caja virtual formada por el
+                                elemento (h1) que contiene ese título). El tamaño del margen puede ser
+                                definido por lados específicos del elemento o todos sus lados a la vez. El estilo
+                                margin: 0px en nuestro ejemplo establece un margen 0 o nulo para cada
+                                elemento de la caja. Si el tamaño hubiese sido especificado en 5 pixeles, por
+                                ejemplo, la caja tendría un espacio de 5 pixeles de ancho en todo su contorno.
+                                Esto significa que la caja estaría separada de sus vecinas por 5 pixeles.
+                                Volveremos sobre este tema más adelante en este capítulo.
+                            </p>                                           
+                    </blockquote>
+                    </p>                    
+                </article>
+                <article>
+                        <hgroup>
+                            <h2>Nueva Jerarquia para Cabeceras</h2>
+                        </hgroup>
+                        <p><blockquote cite="Gauchat, J. (2012). EL GRAN LIBRO DE HTML5, CSS3 Y jAVASCRIPT. ESPAÑA: MARCOMBO. Recuperado el 18 de 10 de 2018">                 
+                          <p>   En nuestra plantilla usamos elementos (h1) y (h2) para declarar títulos y subtítulos de
+                                diferentes secciones del documento. Los estilos por defecto de estos elementos se
+                                encuentran siempre muy lejos de lo que queremos y además en HTML5 podemos
+                                reconstruir la jerarquía H varias veces en cada sección (como aprendimos en el capítulo
+                                anterior). El elemento (h1), por ejemplo, será usado varias veces en el documento, no
+                                solo para el título principal de la página web como pasaba anteriormente sino también
+                                para secciones internas, por lo que tenemos que otorgarle los estilos apropiados: 
+                        </p>    
+                        <img src="imagenes lectura git/css avanzado/jerarquia para cabeceras.jpg" alt="" id="imag5"/>
+                        <p>La propiedad font, asignada a los elementos (h1) y (h2) en el Listado 2-27, nos
+                            permite declarar todos los estilos para el texto en una sola línea. Las propiedades que
+                            pueden ser declaradas usando font son: font-style, font-variant, font-weight,
+                            font-size/line-height, y font-family en este orden. Con estas reglas estamos
+                            cambiando el grosor, tamaño y tipo de letra del texto dentro de los elementos (h1) y
+                            (h2) a los valores que deseamos.</p> 
+                        <h2>Declarando nuevos elementos HTML5</h2> 
+                        <p>Otra regla básica que debemos declarar desde el comienzo es la definición por defecto de
+                            elementos estructurales de HTML5. Algunos navegadores aún no reconocen estos elementos o
+                            los tratan como elementos inline (en línea). Necesitamos declarar los nuevos elementos
+                            HTML5 como elementos block para asegurarnos de que serán tratados como regularmente se
+                            hace con elementos (div) y de este modo construir nuestro modelo de caja:
+                        </p>
+                        <img src="imagenes lectura git/css avanzado/declarando elementos en html5.jpg" alt="" id="imag6"/>                                                                                  
+                        </blockquote>
+                        </p>                   
+                    </article>
+                    <article>
+                        <hgroup>
+                            <h2>Centrando el Cuerpo</h2>
+                        </hgroup>
+                        <p><blockquote cite="">
+                        <p>El primer elemento que es parte del modelo de caja es siempre (body). Normalmente, por
+                            diferentes razones de diseño, el contenido de este elemento debe ser posicionado
+                            horizontalmente. Siempre deberemos especificar el tamaño de este contenido, o un tamaño
+                            máximo, para obtener un diseño consistente a través de diferentes configuraciones de
+                            pantalla.</p>               
+                            <p><img src="imagenes lectura git/css avanzado/centrando el cuerpo.jpg" alt="" id="imag7"/></p>      
+                                                                                                  
+                        </blockquote>
+                            </p>                   
+                        </article>             
+        </section>
+        <aside class="barra">
+                <h1>Diseño Web</h1>
+                <p><q>El diseño web es una de las disciplinas del diseño, entre las que se encuentra también el diseño gráfico, que constituye una de las funciones creativas más elementales del marketing por Internet y que tiene por objetivo la producción de sitios web. 
+                   </q>  
+                </p>                                   
+        </aside>
+        <footer class="pie">
+            Derechos reservados 2018 - 2020
+        </footer>
+    </body>

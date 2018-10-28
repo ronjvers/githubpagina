@@ -1,0 +1,174 @@
+*{
+margin: 0;
+padding:0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+h1{
+    font-size:24px;
+    font-family: open sans, sans serif;
+    font-weight: bold;
+}
+h2{
+font: bold, 18px open sans, sans serif;
+}
+header, section, footer, aside, article, nav, hgroup{
+display: block;
+}
+body{
+text-align: justify;
+}
+.agrupar {
+  margin: auto;
+  width:80%;  
+}
+.cabeza{
+background: #e7b200 ;
+padding:10px;
+}
+.cabeza h1{
+margin: 15px;
+text-align: center;
+}
+/*crear la navegación y el menu desplegable*/
+.navegacion{
+padding: 10px 15px;
+background: #d4a402;
+text-align:left;
+}
+.navegacion{
+list-style:none;
+}
+.menu > li{
+position: relative;
+display: in block;
+}
+.menu > li > a{
+display: block;
+padding: 4px 2px;
+text-decoration: none;
+}
+/* creammos la transicion que nos dara un efecto al pasar el mouse*/
+.menu li a:hover{
+color:white;
+transition: all .3s;
+}
+/*estilizamos los submenus*/
+.submenu{
+  position: absolute;
+  width: 120%;
+  display:none;
+}
+.submenu li a {
+display: block;
+padding: 2px;
+text-decoration: none;
+}
+.menu li:hover .submenu{
+display:block;
+}
+/* creammos la transicion que nos dara un efecto al pasar el mouse por el segundo submenu*/
+.menu li a:hover{
+  color:white;
+  transition: all .3s;
+  }
+  /*estilizamos los submenus*/
+  .submenu1{
+    position: absolute;
+    width: 120%;
+    display:none;
+  }
+  .submenu1 li a {
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+  }
+  .menu li:hover .submenu1{
+  display:block;
+  }
+.menu li{
+list-style: none;
+padding: 10px; 
+font: bold 14px open sans, sans serif;
+display: inline-block;
+}/*imagen antes de slider
+img{
+width: 100%;
+margin: auto;
+}
+*/
+/*empezamos a crear nuestro slider*/
+.slider{
+width:100%;
+margin:auto;
+/*ocultamos las fotos que estan fuera*/
+overflow: hidden;
+}
+/*colocamos una imagen al lado de la otra*/
+.slider ul{
+display: flex;
+padding: 0;
+width:500%;
+/*por ultimo le damos la animacion*/
+animation: cambio 20s infinite alternate;
+/*para que se regrese de la ultima a la priemra imagen
+animation-direction: alternate;*/
+}
+/*le quitamos el estilo de lista*/
+.slider li{
+width: 100%;
+list-style: none;
+}
+.slider img{
+width:100%;
+}
+@keyframes cambio{
+0% {margin-left: 0;}
+15% {margin-left: 0;}
+
+20%{ margin-left: -100%;}
+35%{ margin-left: -100%;}
+
+40%{ margin-left: -200%;}
+55%{ margin-left: -200%;}
+
+60%{ margin-left: -300%;}
+75%{ margin-left: -300%;}
+
+80%{ margin-left: -400%;}
+100%{ margin-left: -400%;}
+}
+.cuerpo{
+margin: 20px;
+width: 60%;
+float: left;
+}
+article{
+font: bold 14px open sans, sans serif;
+background:#1b4668;
+color: white;
+padding: 4px 4px;
+margin-bottom: 30px;
+}
+.pie{
+clear: both;
+text-align:center;
+padding:10px;
+margin-top: 40px;
+background: black;
+font: bold 12px open sans, sans serif;
+color: white;
+}
+.barra {
+  background:#1b4668;
+  color: white;
+  margin-left: 64%;
+  margin-bottom: 30%;
+  padding:3px 3px;
+  margin-top:2%;
+}
+.enlaces{
+text-decoration: none;
+color:#005883;
+}

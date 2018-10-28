@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+    <meta charset = "utf-8" />
+    <title>Cursos de Diseños Web</title>
+    <meta name="desciptiion" content="Cursos de Diseños Web" />
+    <meta name="author" content="Ronny Jesus Vergara Sanes" />
+    <meta name="kywords" content= "Cursos de diseño web, html, git, github, css" />
+    <link rel="stylesheet" href="estiloslectura/estilolectura2.css"> 
+    </head>
+    <body>       
+        <section class="cuerpol">
+            <article>
+                <hgroup>
+                    <h1>Ramificaciones en Git</h1>
+                    <h2></h2>
+                </hgroup>
+                <p><blockquote cite="Chacon , S., & Straub, B. (s.f.). Pro Git (SECOND EDITION ed.). APRESS.">                                       
+                        Cualquier sistema de control de versiones moderno tiene algún mecanismo
+                        para soportar distintos ramales. Cuando hablamos de ramificaciones, significa
+                        que tú has tomado la rama principal de desarrollo (master) y a partir de ahí has
+                        continuado trabajando sin seguir la rama principal de desarrollo. En muchas
+                        sistemas de control de versiones este proceso es costoso, pues a menudo requiere
+                        crear una nueva copia del código, lo cual puede tomar mucho tiempo
+                        cuando se trata de proyectos grandes.
+                        Algunas personas resaltan que uno de los puntos más fuertes de Git es su
+                        sistema de ramificaciones y lo cierto es que esto le hace resaltar sobre los otros
+                        sistemas de control de versiones. ¿Por qué esto es tan importante? La forma en
+                        la que Git maneja las ramificaciones es increíblemente rápida, haciendo así de
+                        las operaciones de ramificación algo casi instantáneo, al igual que el avance o
+                        el retroceso entre distintas ramas, lo cual también es tremendamente rápido. A
+                        diferencia de otros sistemas de control de versiones, Git promueve un ciclo de
+                        desarrollo donde las ramas se crean y se unen ramas entre sí, incluso varias veces
+                        en el mismo día. Entender y manejar esta opción te proporciona una poderosa
+                        y exclusiva herramienta que puede, literalmente, cambiar la forma en la
+                        que desarrollas.       
+                </blockquote>
+                </p> 
+                           
+            </article>
+            <article>
+                    <hgroup>
+                        <h2>Que es una Rama</h2>
+                    </hgroup>
+                    <p><blockquote cite="Chacon , S., & Straub, B. (s.f.). Pro Git (SECOND EDITION ed.). APRESS.">                                           
+                            Para entender realmente cómo ramifica Git, previamente hemos de examinar la
+                            forma en que almacena sus datos.
+                            Recordando lo citado en Chapter 1, Git no los almacena de forma incremental
+                            (guardando solo diferencias), sino que los almacena como una serie de instantáneas
+                            (copias puntuales de los archivos completos, tal y como se encuentran
+                            en ese momento).
+                            En cada confirmación de cambios (commit), Git almacena una instantánea
+                            de tu trabajo preparado. Dicha instantánea contiene además unos metadatos
+                            con el autor y el mensaje explicativo, y uno o varios apuntadores a las confir
+                            maciones (commit) que sean padres directos de esta (un padre en los casos de
+                            confirmación normal, y múltiples padres en los casos de estar confirmando una
+                            fusión (merge) de dos o más ramas).
+                            Para ilustrar esto, vamos a suponer, por ejemplo, que tienes una carpeta con
+                            tres archivos, que preparas (stage) todos ellos y los confirmas (commit). Al preparar
+                            los archivos, Git realiza una suma de control de cada uno de ellos (un resumen
+                            SHA-1, tal y como se mencionaba en Chapter 1), almacena una copia de
+                            cada uno en el repositorio (estas copias se denominan “blobs”), y guarda cada
+                            suma de control en el área de preparación (staging area):  
+                    </p>
+                            <img src="imagenes lectura git/ramificaciones en git/ramificaciones1.jpg" alt="" id="imag1"/> 
+                            
+                            <p>Cuando creas una confirmación con el comando git commit, Git realiza sumas
+                            de control de cada subdirectorio (en el ejemplo, solamente tenemos el directorio
+                            principal del proyecto), y las guarda como objetos árbol en el repositorio
+                            Git. Después, Git crea un objeto de confirmación con los metadatos pertinentes
+                            y un apuntador al objeto árbol raiz del proyecto.
+                            En este momento, el repositorio de Git contendrá cinco objetos: un “blob”
+                            para cada uno de los tres archivos, un árbol con la lista de contenidos del directorio
+                            (más sus respectivas relaciones con los “blobs”), y una confirmación de
+                            cambios (commit) apuntando a la raiz de ese árbol y conteniendo el resto de
+                            metadatos pertinentes.
+                            </p>
+                            
+                            <img src="imagenes lectura git/ramificaciones en git/afirmacion y sus arboles.jpg" alt="" id="imag2"/>
+                            <p>Una rama Git es simplemente un apuntador móvil apuntando a una de esas
+                            confirmaciones. La rama por defecto de Git es la rama master. Con la primera
+                            confirmación de cambios que realicemos, se creará esta rama principal master
+                            apuntando a dicha confirmación. En cada confirmación de cambios que realicemos,
+                            la rama irá avanzando automáticamente.
+                            </p>
+
+                            <p>La rama “master” en Git no es una rama especial. Es como cualquier otra
+                            rama. La única razón por la cual aparece en casi todos los repositorioes es
+                            porque es la que crea por defecto el comando git init y la gente no se
+                            molesta en cambiarle el nombre.
+                            </p>
+                            <img src="imagenes lectura git/ramificaciones en git/rama e historial de afirmaciones.jpg" alt="" id="imag3"/>
+                    </blockquote> 
+                </p>                                    
+                </article>
+                <article>
+                        <hgroup>
+                            <h2>Crar una Rama Nueva</h2>
+                        </hgroup>
+                        <p><blockquote cite="Chacon , S., & Straub, B. (s.f.). Pro Git (SECOND EDITION ed.). APRESS.">                 
+                                <p>¿Qué sucede cuando creas una nueva rama? Bueno…, simplemente se crea un
+                                nuevo apuntador para que lo puedas mover libremente. Por ejemplo, supongamos
+                                que quieres crear una rama nueva denominada “testing”. Para ello, usarás
+                                el comando git branch: 
+                                </p>
+                            <img src="imagenes lectura git/ramificaciones en git/crear un branch.jpg" alt="" id="imag4"/> 
+                            <p>Esto creará un nuevo apuntador apuntando a la misma confirmación donde estés actualmente.</p>     
+                            <img src="imagenes lectura git/ramificaciones en git/dos ramas apuntando al msmo grupo de afirmaciones.jpg" alt="" id="imag5"/>                             
+                               <p>Y, ¿cómo sabe Git en qué rama estás en este momento? Pues…, mediante un
+                                apuntador especial denominado HEAD. Aunque es preciso comentar que este
+                                HEAD es totalmente distinto al concepto de HEAD en otros sistemas de control
+                                de cambios como Subversion o CVS. En Git, es simplemente el apuntador a la
+                                rama local en la que tú estés en ese momento, en este caso la rama master;
+                                pues el comando git branch solamente crea una nueva rama, y no salta a dicha
+                                rama.
+                                CHAPTER 3: Ramificaciones en Git 86 
+                               </p>  
+                               <img src="imagenes lectura git/ramificaciones en git/apuntador a donde estes.jpg" alt="" id="imag6"/>  
+                               <p>Esto puedes verlo fácilmente al ejecutar el comando git log para que te muestre a dónde apunta cada rama. Esta opción se llama --decorate.</p> 
+                               <img src="imagenes lectura git/ramificaciones en git/codigo decorate.jpg" alt="" id="imag7"/>                                                                                                                             
+                        </blockquote>
+                        </p>                   
+                    </article> 
+                <article>
+                        <hgroup>
+                             <h2>Cambiar de Rama</h2>
+                        </hgroup>
+                        <p><blockquote cite="Chacon , S., & Straub, B. (s.f.). Pro Git (SECOND EDITION ed.). APRESS.">                 
+                         <p>Para saltar de una rama a otra, tienes que utilizar el comando git checkout.
+                                Hagamos una prueba, saltando a la rama testing recién creada:</p> 
+                                <img src="imagenes lectura git/ramificaciones en git/mueve el apuntador head.jpg" alt="" id="imag8"/>
+                                <p>Esto mueve el apuntador HEAD a la rama testing.</p>
+                                <img src="imagenes lectura git/ramificaciones en git/el apuntador head apunta a la rama.jpg" alt="" id="imag9"/>                                          
+                                <p>¿Cuál es el significado de todo esto? Bueno… lo veremos tras realizar otra
+                                 confirmación de cambios:</p>
+                                 <img src="imagenes lectura git/ramificaciones en git/made change.jpg" alt="" id="imag10"/> 
+                                 <img src="imagenes lectura git/ramificaciones en git/la rama apuntada avanza con cada confirmación.jpg" alt="" id="imag11"/>    
+                                 <p>Observamos algo interesante: la rama testing avanza, mientras que la
+                                        rama master permanece en la confirmación donde estaba cuando lanzaste el
+                                        comando git checkout para saltar. Volvamos ahora a la rama master:
+                                </p>
+                                        <img src="imagenes lectura git/ramificaciones en git/hed apunta a otra rama cuando hacemos un salto.jpg" alt="" id="imag12"/>
+                                <p>Este comando realiza dos acciones: Mueve el apuntador HEAD de nuevo a la
+                                        rama master, y revierte los archivos de tu directorio de trabajo; dejándolos tal
+                                        y como estaban en la última instantánea confirmada en dicha rama master. Esto
+                                        supone que los cambios que hagas desde este momento en adelante divergirán
+                                        de la antigua versión del proyecto. Básicamente, lo que se está haciendo
+                                        es rebobinar el trabajo que habías hecho temporalmente en la rama testing;
+                                        de tal forma que puedas avanzar en otra dirección diferente.
+                                </p>                                                                                                      
+                        </blockquote>
+                         </p>                   
+               </article>            
+        </section>
+        <aside class="barra">
+                <h1>Diseño Web</h1>
+                <p><q>El diseño web es una de las disciplinas del diseño, entre las que se encuentra también el diseño gráfico, que constituye una de las funciones creativas más elementales del marketing por Internet y que tiene por objetivo la producción de sitios web. 
+                   </q>  
+                </p>                                   
+        </aside>
+        <footer class="pie">
+            Derechos reservados 2018 - 2020
+        </footer>
+    </body>
